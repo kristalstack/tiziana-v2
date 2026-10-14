@@ -1,0 +1,6 @@
+import Link from "next/link";
+import TizianaName from "./TizianaName";
+export default function Hero({locale}:{locale:string}){
+ const es=locale!=="en";
+ return <section className="premium-hero waves-hero" id="tiziana-hero"><div className="waves-art" aria-hidden="true"/><div className="waves-hero-inner"><p className="premium-eyebrow"><TizianaName locale={locale}/> ✦</p><h2>{es?<>Visualiza tus relaciones.<br/>Descubre patrones.<br/><em>Conócete mejor.</em></>:<>Visualize your relationships.<br/>Discover patterns.<br/><em>Understand yourself better.</em></>}</h2><p className="premium-hero-description">{es?"Herramientas basadas en psicología para comprender tu historia, identificar patrones y tomar decisiones más alineadas con lo que realmente quieres.":"Psychology-informed tools to understand your story, identify patterns and make choices aligned with what truly matters to you."}</p><div className="premium-hero-actions"><Link href={`/${locale}/login`} className="premium-action-primary">{es?"Comienza tu experiencia con Tiziana":"Start your Tiziana experience"} →</Link><Link href={`/${locale}/experience`} className="premium-action-secondary">{es?"Conoce las herramientas":"Explore the tools"}</Link></div></div></section>
+}
